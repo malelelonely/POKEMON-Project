@@ -11,7 +11,7 @@ public class Battle extends Pokemon{
         pokemon2.health += pokemon2.defense;
 
         while
-        (pokemon1.health >= 1 || pokemon2.health >= 1)
+        (pokemon1.health >= 1 && pokemon2.health >= 1)
         {
             pokemon2.health = pokemon2.health - pokemon1.attack;
             System.out.println(pokemon1.name +" does "+ pokemon1.attack +" damage to "+
