@@ -1,7 +1,7 @@
 package com.company;
 
 public class Pokemon {
-    public Object battle;
+
     protected int health;
     protected int attack;
     protected int defense;
@@ -18,16 +18,34 @@ public class Pokemon {
         this.type = type;
         this.size = size;
     }
+    public Pokemon(){
+        this.name = "Squirrel";
+        this.type = "turtle";
+        this.appearance = "Water";
+        this.size = "small";
+        this.attack = 48;
+        this.defense = 65;
+        this.health = 144;
+    }
+    public void Pokemon(){
+        this.name = "aaSquirrel";
+        this.type = "turtle";
+        this.appearance = "Water";
+        this.size = "small";
+        this.attack = 48;
+        this.defense = 65;
+        this.health = 144;
+    }
+
 
 
     @Override
     public String toString() {
         return "Pokemon{" +
-                "battle=" + battle +
+                "Pokemon name='" + name + '\'' +
                 ", health=" + health +
                 ", attack=" + attack +
                 ", defense=" + defense +
-                ", name='" + name + '\'' +
                 ", appearance='" + appearance + '\'' +
                 ", type='" + type + '\'' +
                 ", size='" + size + '\'' +
