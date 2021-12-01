@@ -13,8 +13,9 @@ public class Main {
         System.out.println(pokemon4);
         Battle pokemon5 = new Battle("Valon",95,85,130,"dragon","fire","large");
         System.out.println(pokemon5);
-
+      //  System.out.println();
         pokemon1.battle(pokemon1,pokemon2);
+
         
 
     }
