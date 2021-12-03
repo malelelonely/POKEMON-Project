@@ -2,15 +2,10 @@ package com.company;
 
 import java.util.Scanner;
 
-public class Battle extends Pokemon {
+public class Battle {
 
 
-    public Battle(String name, int health, int attack, int defense, String appearance, String type, String size) {
-        super(name, health, attack, defense, appearance, type, size);
-
-    }
-
-    public void battle(Pokemon pokemon1, Pokemon pokemon2) {
+    public static void battle(Pokemon pokemon1, Pokemon pokemon2) {
         Scanner input = new Scanner(System.in);
         int restart;
         int crystals = 0;
