@@ -43,8 +43,6 @@ public class Battle {
         restart = input.nextInt();
         if (restart == 1) {
 
-            //battle(pokemon1,pokemon2);
-            //System.out.println("");
         } else if (restart == 2) {
             System.out.println("Thank you for playing!");
         }
@@ -56,8 +54,8 @@ public class Battle {
             System.out.println("Choose pokemon to enter in battle");
             System.out.println(player);
             int n = input.nextInt();
-            player.crystals+=15;
-            if (n )
+            player.crystals +=15;
+
             battle(player.pokemons.get(n-1),computerPokemons[random.nextInt(4)]);
         }
 

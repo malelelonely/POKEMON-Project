@@ -19,7 +19,7 @@ public class Main {
         System.out.println("4. Rintar");
         System.out.println("5. Valon");
 
-        System.out.print("Your choose : ");
+        System.out.println("Your choose : ");
         int n = in.nextInt();
         int b = in.nextInt();
         int c = in.nextInt();
@@ -32,29 +32,6 @@ public class Main {
 
         System.out.println("You have chosen " + pokemon[n-1].name);
         Battle.tournament(player,pokemon);
-//        switch (n) {
-//            case 1:
-//                System.out.println("You have chosen Pikachu");
-//               Battle.battle(pokemon[0], pokemon[random.nextInt(4)]);
-//                break;
-//
-//            case 2:
-//                System.out.println("You have chosen Baltazar");
-//                Battle.battle(pokemon[1], pokemon[random.nextInt(4)]);
-//                break;
-//            case 3:
-//                System.out.println("You have chosen Balrock");
-//                Battle.battle(pokemon[2], pokemon[random.nextInt(4)]);
-//                break;
-//            case 4:
-//                System.out.println("You have chosen Rintar");
-//                Battle.battle(pokemon[3], pokemon[random.nextInt(4)]);
-//                break;
-//            case 5:
-//                System.out.println("You have chosen Valon");
-//                Battle.battle(pokemon[4], pokemon[random.nextInt(4)]);
-//                break;
-//        }
 
     }
 }
