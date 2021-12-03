@@ -5,7 +5,7 @@ public class Pokemon {
     protected int health;
     protected int attack;
     protected int defense;
-    protected String name;
+    public String name;
     protected String appearance;
     protected String type;
     protected String size;
