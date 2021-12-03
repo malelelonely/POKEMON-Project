@@ -27,17 +27,6 @@ public class Pokemon {
         this.defense = 65;
         this.health = 144;
     }
-    public void Pokemon(){
-        this.name = "aaSquirrel";
-        this.type = "turtle";
-        this.appearance = "Water";
-        this.size = "small";
-        this.attack = 48;
-        this.defense = 65;
-        this.health = 144;
-    }
-
-
 
     @Override
     public String toString() {

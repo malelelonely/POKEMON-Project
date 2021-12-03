@@ -12,6 +12,7 @@ public class Battle extends Pokemon {
 
     public void battle(Pokemon pokemon1, Pokemon pokemon2) {
         Scanner input = new Scanner(System.in);
+        int restart;
         int crystals = 0;
         System.out.println(pokemon1.name + " begins the fight against " + pokemon2.name);
         pokemon1.health += pokemon1.defense;
@@ -39,8 +40,20 @@ public class Battle extends Pokemon {
             System.out.println(pokemon2.name + " has lost the fight and you have won 15 crystals");
             System.out.println("Total crystals : " + crystals);
         }
+        System.out.println("");
+        System.out.println("Fight again?");
+        System.out.println("1 for Yes");
+        System.out.println("2 for No");
+        restart = input.nextInt();
+        if (restart == 1) {
+
+            //battle(pokemon1,pokemon2);
+            //System.out.println("");
+        } else if (restart == 2) {
+            System.out.println("Thank you for playing!");
         }
     }
+}
 
 
 
