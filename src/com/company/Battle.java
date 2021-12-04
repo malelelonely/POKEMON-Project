@@ -44,6 +44,7 @@ public class Battle {
         if (restart == 1) {
 
         } else if (restart == 2) {
+
             System.out.println("Thank you for playing!");
         }
     }
@@ -52,6 +53,7 @@ public class Battle {
         Scanner input = new Scanner(System.in);
         for (int i = 0; i < 5; i++) {
             System.out.println("Choose pokemon to enter in battle");
+
             System.out.println(player);
             int n = input.nextInt();
             player.crystals +=15;

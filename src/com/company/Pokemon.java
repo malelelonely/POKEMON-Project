@@ -30,14 +30,13 @@ public class Pokemon {
 
     @Override
     public String toString() {
-        return "Pokemon{" +
-                "Pokemon name='" + name + '\'' +
-                ", health=" + health +
-                ", attack=" + attack +
-                ", defense=" + defense +
-                ", appearance='" + appearance + '\'' +
-                ", type='" + type + '\'' +
-                ", size='" + size + '\'' +
-                '}';
+        return
+                "Pokemon name ='" + name + '\'' +
+                ", health = " + health +
+                ", attack  =" + attack +
+                ", defense = " + defense +
+                ", appearance = " + appearance + '\'' +
+                ", type ='" + type + '\'' +
+                ", size ='" + size;
     }
 }

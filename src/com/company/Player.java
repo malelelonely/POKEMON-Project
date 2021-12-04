@@ -13,9 +13,8 @@ public class Player {
 
     @Override
     public String toString() {
-        return "Player{" +
-                "crystals=" + crystals +
-                ", pokemons=" + pokemons +
-                '}';
+        return "Player : " +
+                "crystals = " + crystals +
+                ", Pokemons = " + pokemons;
     }
 }
