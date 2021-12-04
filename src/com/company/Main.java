@@ -12,26 +12,33 @@ public class Main {
         pokemon[2] = new Pokemon("Balrock", 300, 60, 45, "bull", "earthquake", "large");
         pokemon[3] = new Pokemon("Rintar", 250, 110, 70, "butterfly", "air", "medium");
         pokemon[4] = new Pokemon("Valon", 285, 85, 130, "dragon", "fire", "large");
-        System.out.println("Choose 3 pokemons :");
-        System.out.println("1. Pikachu");
-        System.out.println("2. Baltazar");
-        System.out.println("3. Balrock");
-        System.out.println("4. Rintar");
-        System.out.println("5. Valon");
 
-        System.out.println("Your choose : ");
-        int n = in.nextInt();
-        int b = in.nextInt();
-        int c = in.nextInt();
-        ArrayList<Pokemon>playerPokemons = new ArrayList<>();
+        int n,b,c;
+        do {
+            System.out.println("Choose 3 pokemons :");
+            System.out.println("1. Pikachu");
+            System.out.println("2. Baltazar");
+            System.out.println("3. Balrock");
+            System.out.println("4. Rintar");
+            System.out.println("5. Valon");
+
+            while (!in.hasNextInt()) {
+
+                System.out.println("That's not a number!");
+                in.next();
+            }
+            n = in.nextInt();
+            b = in.nextInt();
+            c = in.nextInt();
+        } while (n <= 0 || b <= 0 || c <= 0);
+        System.out.println("Thank you! Got " + n+ ","+ b+ ","+ c);
+        ArrayList<Pokemon> playerPokemons = new ArrayList<>();
         playerPokemons.add(pokemon[n]);
         playerPokemons.add(pokemon[b]);
         playerPokemons.add(pokemon[c]);
-
-        Player player = new Player(0,playerPokemons);
-
-        System.out.println("You have chosen " + pokemon[n-1].name);
-        Battle.tournament(player,pokemon);
+        Player player = new Player(0, playerPokemons);
+        System.out.println("You have chosen " + pokemon[n - 1].name);
+        Battle.tournament(player, pokemon);
 
     }
 }
