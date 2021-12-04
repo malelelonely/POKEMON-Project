@@ -19,19 +19,23 @@ public class Main {
         System.out.println("4. Rintar");
         System.out.println("5. Valon");
 
-        System.out.println("Your choose : ");
-        int n = in.nextInt();
-        int b = in.nextInt();
-        int c = in.nextInt();
-        ArrayList<Pokemon>playerPokemons = new ArrayList<>();
-        playerPokemons.add(pokemon[n]);
-        playerPokemons.add(pokemon[b]);
-        playerPokemons.add(pokemon[c]);
+        System.out.println("Choose 3 pokemons : ");
+        int n = in.nextInt()-1;
+        int b = in.nextInt()-1;
+        int c = in.nextInt()-1;
+        if (n < 5 || b < 5 || c < 5) {
+            ArrayList<Pokemon> playerPokemons = new ArrayList<>();
+            playerPokemons.add(pokemon[n]);
+            playerPokemons.add(pokemon[b]);
+            playerPokemons.add(pokemon[c]);
 
-        Player player = new Player(0,playerPokemons);
+            Player player = new Player(0, playerPokemons);
 
-        System.out.println("You have chosen " + pokemon[n-1].name);
-        Battle.tournament(player,pokemon);
+            System.out.println("You have chosen" + "\n" + "1." + pokemon[n].name + "\n" + "2." + pokemon[b].name + "\n" + "3." + pokemon[c].name);
+            Battle.tournament(player, pokemon);
 
+        } else {
+            System.out.println("Wrong input");
+        }
     }
 }
