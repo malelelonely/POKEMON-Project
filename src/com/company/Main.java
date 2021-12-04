@@ -30,8 +30,8 @@ public class Main {
             n = in.nextInt();
             b = in.nextInt();
             c = in.nextInt();
-        } while (n <= 0 || b <= 0 || c <= 0);
-        System.out.println("Thank you! Got " + n+ ","+ b+ ","+ c);
+        } while (n <= 0 || n<6|| b <= 0 || b<6|| c <= 0 || c<6 );
+        System.out.println("Thank you for choose : " + n+ ","+ b+ ","+ c);
         ArrayList<Pokemon> playerPokemons = new ArrayList<>();
         playerPokemons.add(pokemon[n]);
         playerPokemons.add(pokemon[b]);
