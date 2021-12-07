@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
         Random random = new Random();
         Battle pokemon1 = new Battle("Pikachu",100,50,50,"mouse","electric","small");
         Battle pokemon2 = new Battle("Baltazar",200,30,70,"turtle","water","medium");
@@ -17,16 +16,32 @@ public class Main {
         System.out.println("3. Balrock");
         System.out.println("4. Rintar");
         System.out.println("5. Valon");
+        Scanner in = new Scanner(System.in);
         System.out.print("Your choose : ");
         int n = in.nextInt();
-
+        //pokemon1.battle(pokemon1,pokemon2);
         switch(n){
             case 1 :
                 System.out.println("You have chosen Pikachu");
                 pokemon1.battle(pokemon1,pokemon2);
 
-        }
-        
+            while (!in.hasNextInt()) {
+
+                System.out.println("That's not a number!");
+                in.next();
+            }
+            n = in.nextInt();
+            b = in.nextInt();
+            c = in.nextInt();
+        } while (n <= 0 || n<6|| b <= 0 || b<6|| c <= 0 || c<6 );
+        System.out.println("Thank you for choose : " + n+ ","+ b+ ","+ c);
+        ArrayList<Pokemon> playerPokemons = new ArrayList<>();
+        playerPokemons.add(pokemon[n]);
+        playerPokemons.add(pokemon[b]);
+        playerPokemons.add(pokemon[c]);
+        Player player = new Player(0, playerPokemons);
+        System.out.println("You have chosen " + pokemon[n - 1].name);
+        Battle.tournament(player, pokemon);
 
     }
 
