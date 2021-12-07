@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
         Random random = new Random();
         Battle pokemon1 = new Battle("Pikachu",100,50,50,"mouse","electric","small");
         Battle pokemon2 = new Battle("Baltazar",200,30,70,"turtle","water","medium");
@@ -16,10 +17,9 @@ public class Main {
         System.out.println("3. Balrock");
         System.out.println("4. Rintar");
         System.out.println("5. Valon");
-        Scanner in = new Scanner(System.in);
         System.out.print("Your choose : ");
         int n = in.nextInt();
-        //pokemon1.battle(pokemon1,pokemon2);
+
         switch(n){
             case 1 :
                 System.out.println("You have chosen Pikachu");
