@@ -42,6 +42,7 @@ public class Main {
         Player player = new Player(0, playerPokemons);
         System.out.println("You have chosen " + pokemon[n - 1].name);
         Battle.tournament(player, pokemon);
+        System.out.println();
 
     }
 
