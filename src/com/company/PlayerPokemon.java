@@ -18,6 +18,11 @@ public class PlayerPokemon extends Pokemon  {
     }
 
     @Override
+    public void getAttack() {
+
+    }
+
+    @Override
     public String toString() {
         return "Pokemon{" +
                 "health=" + health +

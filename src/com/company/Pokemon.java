@@ -10,6 +10,7 @@ public abstract class Pokemon {
     protected String type;
     protected String size;
 
+    abstract public void getAttack();
 
     @Override
     public String toString() {

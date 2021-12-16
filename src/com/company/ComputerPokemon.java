@@ -15,4 +15,8 @@ public class ComputerPokemon  extends Pokemon{
 
    }
 
+    @Override
+    public void getAttack() {
+
+    }
 }

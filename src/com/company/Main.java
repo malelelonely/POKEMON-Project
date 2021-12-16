@@ -17,6 +17,17 @@ public class Main {
         pokemonList.add(pokemon3);
         pokemonList.add(pokemon4);
         pokemonList.add(pokemon5);
+        ArrayList<Pokemon>computerPokemonList = new ArrayList<>();
+        ComputerPokemon pcPokemon1 = new ComputerPokemon("Raichy",80,60,15,"mouse","electric","medium");
+        ComputerPokemon pcPokemon2 = new ComputerPokemon("Snake",100,150,10,"snake","water","large");
+        ComputerPokemon pcPokemon3 = new ComputerPokemon("Sentret",80,60,15,"mouse","electric","medium");
+        ComputerPokemon pcPokemon4 = new ComputerPokemon("Stunky",50,60,100,"cat","air","medium");
+        ComputerPokemon pcPokemon5 = new ComputerPokemon("Tepig",140,30,150,"pig","earthquake","medium");
+        computerPokemonList.add(pcPokemon1);
+        computerPokemonList.add(pcPokemon2);
+        computerPokemonList.add(pcPokemon3);
+        computerPokemonList.add(pcPokemon4);
+        computerPokemonList.add(pcPokemon5);
         System.out.println("Choose pokemon :");
         System.out.println("1. Pikachu");
         System.out.println("2. Baltazar");
@@ -48,7 +59,7 @@ public class Main {
         playerPokemons.add(pokemonList.get(c-1));
         Player player = new Player(0, playerPokemons);
         System.out.println("You have chosen " + pokemonList.get(n - 1).name);
-        Battle.tournament(player, pokemon);
+        Battle.tournament(player, computerPokemon);
         System.out.println();
 
     }

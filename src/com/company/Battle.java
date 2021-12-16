@@ -49,7 +49,7 @@ public class Battle {
             System.out.println("Thank you for playing!");
         }
     }
-    public static void tournament(Player player,Pokemon computerPokemons[]){
+    public static void tournament(Player player,ComputerPokemon computerPokemons){
         Random random = new Random();
         Scanner input = new Scanner(System.in);
         for (int i = 0; i < 5; i++) {
@@ -59,7 +59,7 @@ public class Battle {
             int n = input.nextInt();
             //player.crystals +=5;
 
-            battle(player.pokemons.get(n-1),computerPokemons[random.nextInt(4)]);
+            battle(player.pokemons.get(n-1), computerPokemons[random.nextInt(4)]);
         }
 
     }
