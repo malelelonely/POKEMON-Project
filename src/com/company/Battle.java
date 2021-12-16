@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Battle {
 
 
+
     public static void battle(Pokemon pokemon1, Pokemon pokemon2) {
         Scanner input = new Scanner(System.in);
         int restart;
@@ -48,7 +49,7 @@ public class Battle {
             System.out.println("Thank you for playing!");
         }
     }
-    public static void tournament(PlayerPokemons player,Pokemon computerPokemons[]){
+    public static void tournament(Player player,Pokemon computerPokemons[]){
         Random random = new Random();
         Scanner input = new Scanner(System.in);
         for (int i = 0; i < 5; i++) {
@@ -56,7 +57,7 @@ public class Battle {
 
             System.out.println(player);
             int n = input.nextInt();
-            player.crystals +=15;
+            //player.crystals +=5;
 
             battle(player.pokemons.get(n-1),computerPokemons[random.nextInt(4)]);
         }

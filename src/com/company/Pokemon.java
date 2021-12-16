@@ -1,6 +1,6 @@
 package com.company;
 
-public abstract class  Pokemon {
+public abstract class Pokemon {
 
     protected int health;
     protected int attack;
