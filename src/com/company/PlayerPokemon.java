@@ -1,15 +1,21 @@
 package com.company;
 
-public abstract class  Pokemon {
+import java.util.ArrayList;
 
-    protected int health;
-    protected int attack;
-    protected int defense;
-    public String name;
-    protected String appearance;
-    protected String type;
-    protected String size;
+public class PlayerPokemon extends Pokemon  {
 
+
+
+    PlayerPokemon(String name,int health,int attack,int defence,String appearance,String type,String size){
+        this.name = name;
+        this.health = health;
+        this.attack = attack;
+        this.defense = defence;
+        this.appearance = appearance;
+        this.type = type;
+        this.size = size;
+
+    }
 
     @Override
     public String toString() {
@@ -21,7 +27,6 @@ public abstract class  Pokemon {
                 ", appearance='" + appearance + '\'' +
                 ", type='" + type + '\'' +
                 ", size='" + size + '\'' +
-
                 '}';
     }
 }
