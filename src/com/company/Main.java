@@ -1,26 +1,29 @@
 package com.company;
-import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        Random random = new Random();
+        Battle pokemon1 = new Battle("Pikachu",100,50,50,"mouse","electric","small");
+        Battle pokemon2 = new Battle("Baltazar",200,30,70,"turtle","water","medium");
+        Battle pokemon3 = new Battle("Balrock",90,60,45,"bull","earthquake","large");
+        Battle pokemon4 = new Battle("Rintar",140,110,70,"butterfly","air","medium");
+        Battle pokemon5 = new Battle("Valon",95,85,130,"dragon","fire","large");
+        System.out.println("Choose pokemon :");
+        System.out.println("1. Pikachu");
+        System.out.println("2. Baltazar");
+        System.out.println("3. Balrock");
+        System.out.println("4. Rintar");
+        System.out.println("5. Valon");
         Scanner in = new Scanner(System.in);
-        Pokemon[] pokemon = new Pokemon[5];
-        pokemon[0] = new Pokemon("Pikachu", 310, 50, 50, "mouse", "electric", "small");
-        pokemon[1] = new Pokemon("Baltazar", 340, 70, 70, "turtle", "water", "medium");
-        pokemon[2] = new Pokemon("Balrock", 300, 60, 45, "bull", "earthquake", "large");
-        pokemon[3] = new Pokemon("Rintar", 250, 110, 70, "butterfly", "air", "medium");
-        pokemon[4] = new Pokemon("Valon", 285, 85, 130, "dragon", "fire", "large");
-
-        int n,b,c;
-        do {
-            System.out.println("Choose 3 pokemons :");
-            System.out.println("1. Pikachu");
-            System.out.println("2. Baltazar");
-            System.out.println("3. Balrock");
-            System.out.println("4. Rintar");
-            System.out.println("5. Valon");
+        System.out.print("Your choose : ");
+        int n = in.nextInt();
+        //pokemon1.battle(pokemon1,pokemon2);
+        switch(n){
+            case 1 :
+                System.out.println("You have chosen Pikachu");
+                pokemon1.battle(pokemon1,pokemon2);
 
             while (!in.hasNextInt()) {
 
@@ -39,6 +42,8 @@ public class Main {
         PlayerPokemons player = new PlayerPokemons(0, playerPokemons);
         System.out.println("You have chosen " + pokemon[n - 1].name);
         Battle.tournament(player, pokemon);
+        System.out.println();
 
     }
+
 }
