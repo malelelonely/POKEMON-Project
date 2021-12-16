@@ -2,13 +2,13 @@ package com.company;
 
 import java.util.ArrayList;
 
-public class Player {
+public class PlayerPokemons  {
     int crystals;
 
-    ArrayList<Pokemon>pokemons;
-    Player(int crystals,ArrayList<Pokemon>pokemons){
+
+    PlayerPokemons(int crystals){
         this.crystals = crystals;
-        this.pokemons = pokemons;
+
     }
 
     @Override

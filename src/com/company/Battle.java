@@ -48,7 +48,7 @@ public class Battle {
             System.out.println("Thank you for playing!");
         }
     }
-    public static void tournament(Player player,Pokemon computerPokemons[]){
+    public static void tournament(PlayerPokemons player,Pokemon computerPokemons[]){
         Random random = new Random();
         Scanner input = new Scanner(System.in);
         for (int i = 0; i < 5; i++) {
