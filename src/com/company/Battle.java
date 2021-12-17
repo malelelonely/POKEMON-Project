@@ -3,7 +3,7 @@ package com.company;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Battle {
+public class Battle implements Tournament{
 
 
 
@@ -49,7 +49,8 @@ public class Battle {
             System.out.println("Thank you for playing!");
         }
     }
-    public static void tournament(Player player,ComputerPokemon computerPokemons){
+
+        public static void tournament(Player player, ComputerPokemon computerPokemons){
         Random random = new Random();
         Scanner input = new Scanner(System.in);
         for (int i = 0; i < 5; i++) {
