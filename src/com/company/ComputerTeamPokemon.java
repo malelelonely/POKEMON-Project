@@ -3,9 +3,9 @@ package com.company;
 import java.util.ArrayList;
 
 public class ComputerTeamPokemon {
-    ArrayList<Pokemon>pcPokemon;
+    ArrayList<Pokemon>computerPokemon;
 
     public ComputerTeamPokemon(ArrayList<Pokemon>computerPokemon){
-        this.pcPokemon = computerPokemon;
+        this.computerPokemon = computerPokemon;
     }
 }
