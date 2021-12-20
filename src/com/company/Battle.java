@@ -50,7 +50,7 @@ public class Battle implements Tournament{
         }
     }
 
-        public static void tournament(Player player, ComputerPokemon computerPokemons){
+        public static void tournament(Player player, ComputerTeamPokemon computerPokemons){
         Random random = new Random();
         Scanner input = new Scanner(System.in);
         for (int i = 0; i < 5; i++) {
@@ -60,7 +60,7 @@ public class Battle implements Tournament{
             int n = input.nextInt();
             //player.crystals +=5;
 
-            battle(player.pokemons.get(n-1), computerPokemons[random.nextInt(4)]);
+            battle(player.pokemons.get(n-1), computerPokemons.computerPokemon.get(n-1).[random.nextInt(4)]);
         }
 
     }

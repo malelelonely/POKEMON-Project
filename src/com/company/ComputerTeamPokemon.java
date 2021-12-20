@@ -6,6 +6,7 @@ public class ComputerTeamPokemon {
     ArrayList<Pokemon>computerPokemon;
 
     public ComputerTeamPokemon(ArrayList<Pokemon>computerPokemon){
+
         this.computerPokemon = computerPokemon;
     }
 }

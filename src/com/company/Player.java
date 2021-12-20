@@ -8,5 +8,6 @@ public class Player {
      public Player(int crystals,ArrayList<Pokemon>pokemons){
          this.crystals = crystals;
          this.pokemons = pokemons;
+
      }
 }

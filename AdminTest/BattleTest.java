@@ -9,4 +9,8 @@ public class BattleTest {
 
 
     }
+    @Test
+    public void tournamentTest(){
+        Battle tournament = new Battle();
+    }
 }
