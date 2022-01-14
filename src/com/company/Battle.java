@@ -3,21 +3,19 @@ package com.company;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Battle extends PokemonTools implements Tournament{
-
-
+    public class Battle extends PokemonTools implements Tournament{
 
     public static void battle(Pokemon pokemon1, Pokemon pokemon2) {
+
         Scanner input = new Scanner(System.in);
         int restart;
 
-
-
         int crystals = 0;
+
         System.out.println(pokemon1.name + " begins the fight against " + pokemon2.name);
+
         pokemon1.health += pokemon1.defense;
         pokemon2.health += pokemon2.defense;
-
 
         if(pokemon1.size == SizePokemon.SMALL && pokemon2.size == SizePokemon.SMALL){
             pokemon1.health += 20;
@@ -82,7 +80,6 @@ public class Battle extends PokemonTools implements Tournament{
             System.out.println("Choose pokemon to enter in battle");
 
             int n = input.nextInt();
-
 
             battle(player.pokemons.get(n-1), computerPokemons.computerPokemon.get(random.nextInt(4)));
         }

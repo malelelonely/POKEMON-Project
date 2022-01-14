@@ -1,8 +1,8 @@
 package com.company;
 import java.util.ArrayList;
+
+
 public class InitializationGame extends PokemonTools {
-
-
 
     public ArrayList<Pokemon>playerPokemon(){
 
@@ -19,14 +19,16 @@ public class InitializationGame extends PokemonTools {
         pokemonList.add(pokemon5);
 
         return pokemonList;
+
     }
     public ArrayList<Pokemon>computerPokemonList(){
+
         ArrayList<Pokemon>computerPokemonList = new ArrayList<>();
-        ComputerPokemon pcPokemon1 = new ComputerPokemon("Raichy",80,60,15,"mouse",TypePokemon.ELECTRIC,SizePokemon.MEDIUM);
+        ComputerPokemon pcPokemon1 = new ComputerPokemon("Raichy",80,60,30,"mouse",TypePokemon.ELECTRIC,SizePokemon.MEDIUM);
         ComputerPokemon pcPokemon2 = new ComputerPokemon("Snake",100,150,10,"snake",TypePokemon.WATER,SizePokemon.LARGE);
         ComputerPokemon pcPokemon3 = new ComputerPokemon("Sentret",80,60,15,"mouse",TypePokemon.STEEL,SizePokemon.SMALL);
-        ComputerPokemon pcPokemon4 = new ComputerPokemon("Stunky",50,60,100,"cat",TypePokemon.PSYCHIC,SizePokemon.MEDIUM);
-        ComputerPokemon pcPokemon5 = new ComputerPokemon("Tepig",140,30,150,"pig",TypePokemon.GRASS,SizePokemon.LARGE);
+        ComputerPokemon pcPokemon4 = new ComputerPokemon("Stunky",50,60,10,"cat",TypePokemon.PSYCHIC,SizePokemon.MEDIUM);
+        ComputerPokemon pcPokemon5 = new ComputerPokemon("Tepig",140,110,150,"pig",TypePokemon.GRASS,SizePokemon.LARGE);
         computerPokemonList.add(pcPokemon1);
         computerPokemonList.add(pcPokemon2);
         computerPokemonList.add(pcPokemon3);
@@ -34,5 +36,6 @@ public class InitializationGame extends PokemonTools {
         computerPokemonList.add(pcPokemon5);
 
         return computerPokemonList;
+
     }
 }
