@@ -9,9 +9,11 @@ public class BattleTest {
         Battle battle = new Battle();
 
 
+
     }
     @Test
     public void tournamentTest(){
-        Battle tournament = new Battle();
+
+
     }
 }

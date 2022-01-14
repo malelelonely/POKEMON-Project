@@ -73,6 +73,8 @@ public class PokemonTools{
         System.out.println("Thank you for choose : " + a+ ","+ b+ ","+ c);
 
     }
+
+
 }
 
 

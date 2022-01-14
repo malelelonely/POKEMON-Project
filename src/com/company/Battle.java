@@ -3,37 +3,37 @@ package com.company;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Battle implements Tournament{
+public class Battle extends PokemonTools implements Tournament{
 
 
 
     public static void battle(Pokemon pokemon1, Pokemon pokemon2) {
         Scanner input = new Scanner(System.in);
         int restart;
+
+
+
         int crystals = 0;
         System.out.println(pokemon1.name + " begins the fight against " + pokemon2.name);
         pokemon1.health += pokemon1.defense;
         pokemon2.health += pokemon2.defense;
 
 
-        if(pokemon1.size == SizePokemon.SMALL){
+        if(pokemon1.size == SizePokemon.SMALL && pokemon2.size == SizePokemon.SMALL){
             pokemon1.health += 20;
-        }
-        if(pokemon2.size == SizePokemon.SMALL){
             pokemon2.health += 20;
         }
-        if(pokemon1.size == SizePokemon.MEDIUM){
+
+        if(pokemon1.size == SizePokemon.MEDIUM && pokemon2.size == SizePokemon.MEDIUM){
             pokemon1.health += 40;
-        }
-        if(pokemon2.size == SizePokemon.MEDIUM){
             pokemon2.health += 40;
         }
-        if(pokemon1.size == SizePokemon.LARGE){
-            pokemon1.health +=60;
-        }
-        if(pokemon2.size == SizePokemon.LARGE){
+
+        if(pokemon1.size == SizePokemon.LARGE && pokemon2.size == SizePokemon.LARGE){
+            pokemon1.health += 60;
             pokemon2.health += 60;
         }
+
 
         while
         (pokemon1.health >= 1 && pokemon2.health >= 1) {
@@ -50,25 +50,28 @@ public class Battle implements Tournament{
         }
         if
         (pokemon1.health <= 0) {
-            System.out.println("LOSER!");
+            printLoser();
             System.out.println(pokemon1.name + " has lost the fight");
         } else {
             crystals += 15;
-            System.out.println("WINNER!");
+            printCongrats();
             System.out.println(pokemon2.name + " has lost the fight and you have won 15 crystals");
             System.out.println("Total crystals : " + crystals);
-        }
-        System.out.println("");
-        System.out.println("Fight again?");
-        System.out.println("1 for Yes");
-        System.out.println("2 for No");
-        restart = input.nextInt();
-        if (restart == 1) {
 
-        } else if (restart == 2) {
+            System.out.println("");
+            System.out.println("Fight again?");
+            System.out.println("1 for Yes");
+            System.out.println("2 for No");
+            restart = input.nextInt();
+            if (restart == 1) {
 
-            System.out.println("Thank you for playing!");
+            } else if (restart == 2) {
+
+                System.out.println("Thank you for playing!");
+            }
+
         }
+
     }
     @Override
         public  void tournament(Player player, ComputerTeamPokemon computerPokemons){
@@ -85,6 +88,7 @@ public class Battle implements Tournament{
         }
 
     }
+
 }
 
 
