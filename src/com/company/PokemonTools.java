@@ -22,7 +22,6 @@ public class PokemonTools{
 
     };
 
-
     private static String[] congrats = {
             " _____                             _         _       _   _                 _ ",
             "/  __ |                           | |       | |     | | (_)               | |",
@@ -41,9 +40,24 @@ public class PokemonTools{
             "  | | (_) | |_| | | |___| (_) \\__ \\  __/_|      ",
             "  \\_/\\___/ \\__,_| \\_____/\\___/|___/\\___(_) \n"
     };
+   public static void printPokeTitle(){
+       for (int i = 0; i < pokeTitle.length; i++) {
+           System.out.println(pokeTitle[i]);
+       }
+   }
+   public static void printCongrats(){
+       for (int i = 0; i < congrats.length ; i++) {
+           System.out.println(congrats[i]);
+       }
+   }
+   public static void printLoser(){
+       for (int i = 0; i < congrats.length ; i++) {
+           System.out.println(congrats[i]);
 
+       }
+   }
     public void pokemonChoose(){
-        System.out.println("Choose pokemon :");
+        System.out.println("                    Choose your three Pokemons :");
         System.out.println("1. Pikachu");
         System.out.println("2. Baltazar");
         System.out.println("3. Balrock");
@@ -58,24 +72,6 @@ public class PokemonTools{
         c = in.nextInt();
         System.out.println("Thank you for choose : " + a+ ","+ b+ ","+ c);
 
-    }
-
-    public static String[] getCongrats() {
-        return congrats;
-    }
-
-    public static String[] getPokeTitle() {
-        return pokeTitle;
-    }
-
-    public static String[] getLoser() {
-        return loser;
-    }
-
-    @Override
-    public String toString() {
-        getCongrats();
-        return super.toString();
     }
 }
 

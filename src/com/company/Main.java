@@ -6,10 +6,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        PokemonTools.printPokeTitle();
+        System.out.println("                 Welcome to the best Pokemon game!");
         Random random = new Random();
-        PokemonTools title = new PokemonTools();
-        System.out.println(title);
-
         InitializationGame playerPokemonList = new InitializationGame();
         playerPokemonList.playerPokemon();
         InitializationGame computerPokomonList = new InitializationGame();
@@ -17,8 +16,9 @@ public class Main {
        PokemonTools choose = new PokemonTools();
        choose.pokemonChoose();
 
+
         ArrayList<Pokemon> playerPokemons = new ArrayList<>();
-        //playerPokemons.add(playerPokemonList.playerPokemon().get(a - 1);
+        playerPokemons.add(playerPokemonList.playerPokemon().get(a - 1);
         //playerPokemons.add(playerPokemonList.playerPokemon(n - 1).get(b - 1));
         //playerPokemons.add(playerPokemonList.playerPokemon(n - 1).get(c - 1));
         //Player player = new Player(0, playerPokemons);
