@@ -1,9 +1,13 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class PokemonTools{
+ PokemonTools pokemonTools;
+ InitializationGame initializationGame;
 
     public static  String[] pokeTitle = {
             "                               .::.                           ",
@@ -64,14 +68,24 @@ public class PokemonTools{
         System.out.println("4. Rintar");
         System.out.println("5. Valon");
         Scanner in = new Scanner(System.in);
-        System.out.print("Your choose : ");
-        int a,b,c;
-
-        a = in.nextInt();
-        b = in.nextInt();
-        c = in.nextInt();
-        System.out.println("Thank you for choose : " + a+ ","+ b+ ","+ c);
-
+        System.out.print("Choose 3 Pokemons : ");
+        Random random = new Random();
+        int a = in.nextInt();
+        int b = in.nextInt();
+        int c = in.nextInt();
+        System.out.println("Your choice is : " + a+ ","+ b+ ","+ c);
+        InitializationGame playerPokemonList = new InitializationGame();
+        playerPokemonList.playerPokemon();
+        InitializationGame computerPokomonList = new InitializationGame();
+        computerPokomonList.computerPokemonList();
+        ArrayList<Pokemon> playerPokemons = new ArrayList<>();
+        playerPokemons.add(playerPokemonList.playerPokemon().get(a - 1));
+        playerPokemons.add(playerPokemonList.playerPokemon().get(b - 1));
+        playerPokemons.add(playerPokemonList.playerPokemon().get(c - 1));
+        Player player = new Player(0, playerPokemons);
+        ComputerTeamPokemon computerPokemonsTeams = new ComputerTeamPokemon(computerPokomonList.playerPokemon());
+        Battle tournament1 = new Battle();
+        tournament1.tournament(player,computerPokomonList.computerPokemonList(random.nextInt(4)));
     }
 }
 

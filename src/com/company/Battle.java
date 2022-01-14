@@ -3,7 +3,7 @@ package com.company;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Battle implements Tournament{
+public class Battle extends PokemonTools implements Tournament{
 
 
 
@@ -50,10 +50,12 @@ public class Battle implements Tournament{
         }
         if
         (pokemon1.health <= 0) {
+            printLoser();
             System.out.println("LOSER!");
             System.out.println(pokemon1.name + " has lost the fight");
         } else {
             crystals += 15;
+            printCongrats();
             System.out.println("WINNER!");
             System.out.println(pokemon2.name + " has lost the fight and you have won 15 crystals");
             System.out.println("Total crystals : " + crystals);
