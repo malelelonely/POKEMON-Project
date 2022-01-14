@@ -83,9 +83,9 @@ public class PokemonTools{
         playerPokemons.add(playerPokemonList.playerPokemon().get(b - 1));
         playerPokemons.add(playerPokemonList.playerPokemon().get(c - 1));
         Player player = new Player(0, playerPokemons);
-        ComputerTeamPokemon computerPokemonsTeams = new ComputerTeamPokemon(computerPokomonList.playerPokemon());
+        ComputerTeamPokemon computerPokemonsTeams = new ComputerTeamPokemon(computerPokomonList.computerPokemonList());
         Battle tournament1 = new Battle();
-        tournament1.tournament(player,computerPokomonList.computerPokemonList(random.nextInt(4)));
+        tournament1.tournament(player,computerPokemonsTeams);
     }
 
 

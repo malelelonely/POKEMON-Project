@@ -6,7 +6,7 @@ public class PlayerPokemon extends Pokemon  {
 
 
 
-    PlayerPokemon(String name,int health,int attack,int defence,String appearance,TypePokemon types,SizePokemon sizes){
+    public PlayerPokemon(String name,int health,int attack,int defence,String appearance,TypePokemon types,SizePokemon sizes){
         this.name = name;
         this.health = health;
         this.attack = attack;
