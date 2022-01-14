@@ -6,8 +6,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class PokemonTools{
- PokemonTools pokemonTools;
- InitializationGame initializationGame;
+
+
 
     public static  String[] pokeTitle = {
             "                               .::.                           ",
@@ -55,8 +55,8 @@ public class PokemonTools{
        }
    }
    public static void printLoser(){
-       for (int i = 0; i < congrats.length ; i++) {
-           System.out.println(congrats[i]);
+       for (int i = 0; i < loser.length ; i++) {
+           System.out.println(loser[i]);
 
        }
    }

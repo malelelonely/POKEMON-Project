@@ -9,6 +9,8 @@ public class BattleTest {
         PlayerPokemon pokemon1 = new PlayerPokemon("Pikachu",100,50,50,"mouse", TypePokemon.ELECTRIC, SizePokemon.SMALL);
         ComputerPokemon pcPokemon1 = new ComputerPokemon("Raichy",80,60,15,"mouse",TypePokemon.ELECTRIC,SizePokemon.MEDIUM);
          //int actualResult = Battle.battle(pokemon1,pcPokemon1);
+        int expectedResult = 1;
+        assert equals(1);
 
 
 

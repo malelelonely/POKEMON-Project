@@ -78,9 +78,9 @@ public class Battle extends PokemonTools implements Tournament{
         Random random = new Random();
         Scanner input = new Scanner(System.in);
         for (int i = 0; i < 5; i++) {
+
             System.out.println("Choose pokemon to enter in battle");
 
-            System.out.println(player);
             int n = input.nextInt();
 
 
@@ -88,6 +88,8 @@ public class Battle extends PokemonTools implements Tournament{
         }
 
     }
+
+
 
 }
 
