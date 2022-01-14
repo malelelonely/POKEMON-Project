@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class ComputerTeamPokemonTest {
     @Test
     public void ComputerTeamPokemonTest(){
-        ArrayList<Pokemon> actual = new ArrayList<>(5);
+        ArrayList<Pokemon> actual = new ArrayList<>(4);
         ArrayList<Pokemon> expected = new ArrayList<>(5);
 
         Arrays.equals(actual.toArray(),expected.toArray());

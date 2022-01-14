@@ -2,7 +2,7 @@ package com.company;
 
 public interface Tournament {
 
-   static void tournament(Player player, ComputerPokemon computerPokemons) { }
+   public void tournament(Player player, ComputerTeamPokemon computerPokemons);
 }
 
 

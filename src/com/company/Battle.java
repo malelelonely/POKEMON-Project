@@ -14,6 +14,27 @@ public class Battle implements Tournament{
         System.out.println(pokemon1.name + " begins the fight against " + pokemon2.name);
         pokemon1.health += pokemon1.defense;
         pokemon2.health += pokemon2.defense;
+
+
+        if(pokemon1.size == SizePokemon.SMALL){
+            pokemon1.health += 20;
+        }
+        if(pokemon2.size == SizePokemon.SMALL){
+            pokemon2.health += 20;
+        }
+        if(pokemon1.size == SizePokemon.MEDIUM){
+            pokemon1.health += 40;
+        }
+        if(pokemon2.size == SizePokemon.MEDIUM){
+            pokemon2.health += 40;
+        }
+        if(pokemon1.size == SizePokemon.LARGE){
+            pokemon1.health +=60;
+        }
+        if(pokemon2.size == SizePokemon.LARGE){
+            pokemon2.health += 60;
+        }
+
         while
         (pokemon1.health >= 1 && pokemon2.health >= 1) {
             pokemon2.health = pokemon2.health - pokemon1.attack;
@@ -49,8 +70,8 @@ public class Battle implements Tournament{
             System.out.println("Thank you for playing!");
         }
     }
-
-        public static void tournament(Player player, ComputerTeamPokemon computerPokemons){
+    @Override
+        public  void tournament(Player player, ComputerTeamPokemon computerPokemons){
         Random random = new Random();
         Scanner input = new Scanner(System.in);
         for (int i = 0; i < 5; i++) {
@@ -58,9 +79,9 @@ public class Battle implements Tournament{
 
             System.out.println(player);
             int n = input.nextInt();
-            //player.crystals +=5;
 
-            battle(player.pokemons.get(n-1), computerPokemons.computerPokemon.get(n-1).[random.nextInt(4)]);
+
+            battle(player.pokemons.get(n-1), computerPokemons.computerPokemon.get(random.nextInt(4)));
         }
 
     }

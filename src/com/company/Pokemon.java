@@ -8,9 +8,9 @@ public abstract class Pokemon {
     public String name;
     protected String appearance;
     protected String type;
-    protected String size;
+    protected SizePokemon size;
 
-    abstract public void getAttack();
+
 
     @Override
     public String toString() {
