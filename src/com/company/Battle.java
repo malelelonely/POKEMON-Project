@@ -5,9 +5,11 @@ import java.util.Scanner;
 
     public class Battle extends PokemonTools implements Tournament{
 
-    public static void battle(Pokemon pokemon1, Pokemon pokemon2) {
+    public static int battle(Pokemon pokemon1, Pokemon pokemon2) {
+
 
         Scanner input = new Scanner(System.in);
+
         int restart;
 
         int crystals = 0;
@@ -38,8 +40,8 @@ import java.util.Scanner;
             pokemon2.health = pokemon2.health - pokemon1.attack;
             System.out.println(pokemon1.name + " does " + pokemon1.attack + " damage to " +
                     pokemon2.name + " and " + pokemon2.name + " has " + pokemon2.health + " health left.");
-            if
-            (pokemon2.health <= 0)
+
+            if (pokemon2.health <= 0)
                 break;
             pokemon1.health = pokemon1.health - pokemon2.attack;
 
@@ -49,12 +51,16 @@ import java.util.Scanner;
         if
         (pokemon1.health <= 0) {
             printLoser();
+
             System.out.println(pokemon1.name + " has lost the fight");
+            return 0;
         } else {
             crystals += 15;
             printCongrats();
             System.out.println(pokemon2.name + " has lost the fight and you have won 15 crystals");
+
             System.out.println("Total crystals : " + crystals);
+
 
             System.out.println("");
             System.out.println("Fight again?");
@@ -67,7 +73,7 @@ import java.util.Scanner;
 
                 System.out.println("Thank you for playing!");
             }
-
+            return 1;
         }
 
     }
@@ -82,6 +88,7 @@ import java.util.Scanner;
             int n = input.nextInt();
 
             battle(player.pokemons.get(n-1), computerPokemons.computerPokemon.get(random.nextInt(4)));
+
         }
 
     }
