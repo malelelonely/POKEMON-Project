@@ -7,32 +7,11 @@ import java.util.Scanner;
 
     public static int battle(Pokemon pokemon1, Pokemon pokemon2) {
 
-
         Scanner input = new Scanner(System.in);
-
-        int restart;
 
         int crystals = 0;
 
         System.out.println(pokemon1.name + " begins the fight against " + pokemon2.name);
-
-        pokemon1.health += pokemon1.defense;
-        pokemon2.health += pokemon2.defense;
-
-        if(pokemon1.size == SizePokemon.SMALL && pokemon2.size == SizePokemon.SMALL){
-            pokemon1.health += 20;
-            pokemon2.health += 20;
-        }
-
-        if(pokemon1.size == SizePokemon.MEDIUM && pokemon2.size == SizePokemon.MEDIUM){
-            pokemon1.health += 40;
-            pokemon2.health += 40;
-        }
-
-        if(pokemon1.size == SizePokemon.LARGE && pokemon2.size == SizePokemon.LARGE){
-            pokemon1.health += 60;
-            pokemon2.health += 60;
-        }
 
 
         while
@@ -55,13 +34,33 @@ import java.util.Scanner;
             System.out.println(pokemon1.name + " has lost the fight");
             return 0;
         } else {
-            crystals += 15;
+
             printCongrats();
             System.out.println(pokemon2.name + " has lost the fight and you have won 15 crystals");
-
+            System.out.println(pokemon1.name +" " +pokemon1.health + " health left");
+            crystals += 15;
             System.out.println("Total crystals : " + crystals);
 
+            return 1;
+        }
 
+    }
+
+
+
+
+    @Override
+        public  void tournament(Player player, ComputerTeamPokemon computerPokemons){
+        Random random = new Random();
+        Scanner input = new Scanner(System.in);
+
+        for (int i = 0; i < 5; i++) {
+
+            System.out.println("Choose pokemon to enter in battle");
+
+            int n = input.nextInt();
+            int restart;
+            battle(player.pokemons.get(n-1), computerPokemons.computerPokemon.get(random.nextInt(4)));
             System.out.println("");
             System.out.println("Fight again?");
             System.out.println("1 for Yes");
@@ -73,22 +72,6 @@ import java.util.Scanner;
 
                 System.out.println("Thank you for playing!");
             }
-            return 1;
-        }
-
-    }
-    @Override
-        public  void tournament(Player player, ComputerTeamPokemon computerPokemons){
-        Random random = new Random();
-        Scanner input = new Scanner(System.in);
-        for (int i = 0; i < 5; i++) {
-
-            System.out.println("Choose pokemon to enter in battle");
-
-            int n = input.nextInt();
-
-            battle(player.pokemons.get(n-1), computerPokemons.computerPokemon.get(random.nextInt(4)));
-
         }
 
     }

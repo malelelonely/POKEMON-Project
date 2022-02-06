@@ -89,8 +89,54 @@ public class PokemonTools{
         int a = in.nextInt();
         int b = in.nextInt();
         int c = in.nextInt();
+        if(a == 1 ){
+            System.out.println("Pickachu");
+        }
+        if(a ==2){
+            System.out.println("Baltazar");
+        }
+        if(a ==3){
+            System.out.println("Balrock");
+        }
+        if(a ==4){
+            System.out.println("Rintar");
+        }
+        if(a ==5){
+            System.out.println("Valon");
+        }
+        if(b == 1 ){
+            System.out.println("Pickachu");
+        }
+        if(b ==2){
+            System.out.println("Baltazar");
+        }
+        if(b ==3){
+            System.out.println("Balrock");
+        }
+        if(b ==4){
+            System.out.println("Rintar");
+        }
+        if(b ==5){
+            System.out.println("Valon");
+        }
+        if(c == 1 ){
+            System.out.println("Pickachu");
+        }
+        if(c ==2){
+            System.out.println("Baltazar");
+        }
+        if(c ==3){
+            System.out.println("Balrock");
+        }
+        if(c ==4){
+            System.out.println("Rintar");
+        }
+        if(c ==5){
+            System.out.println("Valon");
+        }
 
-        System.out.println("Your choice is : " + a+ ","+ b+ ","+ c);
+
+        System.out.println("Your choice is : " + a + ","+ b + ","+ c);
 
         InitializationGame playerPokemonList = new InitializationGame();
 
@@ -113,9 +159,11 @@ public class PokemonTools{
         Battle tournament1 = new Battle();
 
         tournament1.tournament(player,computerPokemonsTeams);
+
+    }
     }
 
 
-}
+
 
 
