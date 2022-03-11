@@ -47,8 +47,6 @@ import java.util.Scanner;
     }
 
 
-
-
     @Override
         public  void tournament(Player player, ComputerTeamPokemon computerPokemons){
         Random random = new Random();
